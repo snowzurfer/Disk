@@ -84,7 +84,7 @@ public extension Disk {
                 let newFileNameInt = largestFileNameInt + 1
                 var imageData: Data
                 var imageName = "\(newFileNameInt)"
-                if let data = image.pngData() {
+                if let data = value.pngData() {
                     imageData = data
                     imageName = imageName + ".png"
                 } else if let data = value.jpegData(compressionQuality: 1) {

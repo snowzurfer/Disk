@@ -34,7 +34,7 @@ public extension Disk {
         do {
             var imageData: Data
             if path.suffix(4).lowercased() == ".png" {
-                if let data = image.pngData() {
+                if let data = value.pngData() {
                     imageData = data
                 } else {
                     throw createError(
@@ -56,7 +56,7 @@ public extension Disk {
                     )
                 }
             } else {
-                if let data = image.pngData() {
+                if let data = value.pngData() {
                     imageData = data
                 } else if let data = value.jpegData(compressionQuality: 1) {
                     imageData = data
